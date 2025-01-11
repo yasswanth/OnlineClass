@@ -1,0 +1,125 @@
+Arrays:
+       Array is used to stored the numbers.There are three types.
+Single Dimentional Arrays.
+Two Dimentional Arrays.
+Multi Dimentional Arrays.
+ Finding the Sum Of Two Numbers in Given Array.
+Approuch 1:
+  public class TwoSum{
+public static void main(String[] args){
+int [] arr={10,20,40,100,150};  // declaration of array
+int sum=120;
+int nopair=0;
+for(int i=0;i<arr.length;i++){
+for(int j=0;j<arr.length;j++){
+if(arr[i]+arr[j]==sum && arr[i]<arr[j]){
+System.out.println("["+arr[i]+","+arr[j]+"]");
+nopair=1;
+break;
+}
+}
+}
+if(nopair==0){
+System.out.println("No Pairs is geting the given sum");
+}
+else{
+System.out.println("we are geting the out put");
+}
+}
+}
+Output:
+[20,100]
+We are getting the out put.
+Time Complexcity:O(n2)
+Approuch2:
+Collection Framework in java.  Having by default hetiroginous names.
+Class
+Interface
+Extends
+       From this interface collection having a so many child classes. 
+List:
+1.Duplicates are allowed.
+2. Preserves the insertion order.
+3.Multiple null objects are allowed. 
+Classes
+1.ArrayList.
+Add().
+Remove().
+Clear().
+Size().
+Isempty().
+Contains().
+2.LinkedList.
+3.Vector.
+4.Stack.
+Set
+1.Duplicates are not allowed.
+2.Does NOT Preserves the insertion order.
+3.Single null objects allowed.
+Classes
+1.HashSet.
+2.LinkedHashSet.
+3.SortedSet.
+                           TreeSet.  
+Queue
+1.PriorityQueue.
+Map:it is similar like a set what ever classes are avilable in the set that all things are present in this map.
+Counting the total numbers present in the array .
+For Example:Given array contains elements like {2123,323,3122,32}.
+Output:4,3,4,2
+Programm:
+public class CounterNumber{
+public static void main(String[] args){
+int arr[]={2122,31333,223,23,1};
+int counter;
+for(int i=0;i<arr.length;i++){
+counter=0;
+int n=arr[i];
+while(n>0){
+counter++;
+n=n/10;
+}
+System.out.println("Number"+(i+1)+" having "+counter+" digits.");
+}
+}
+}
+Output:
+Number1 having 4 digits.
+Number2 having 5 digits.
+Number3 having 3 digits.
+Number4 having 2 digits.
+Number5 having 1 digits.
+Writing the java programm for finding the number of evennumbers and number of oddnumbers present in given mobile number.
+   For Example:{8309454874L,6305836303L,8106064066L,8790974727L}
+   Output:This Mobile Number 8309454874 having 6 evennubers  ,4 oddnumbers
+This Mobile Number 6305836303 having 5 evennubers  ,5 oddnumbers
+This Mobile Number 8106064066 having 9 evennubers  ,1 oddnumbers
+This Mobile Number 8790974727 having 4 evennubers  ,6 oddnumbers
+Programm:
+public class EvenNumbers{
+public static void main(String[] args){
+long arr[]={8309454874L,6305836303L,8106064066L,8790974727L};
+int evencounter,oddcounter;
+for(int i=0;i<arr.length;i++){
+evencounter=0;
+oddcounter=0;
+long n=arr[i];
+while(n>0){
+int rem=(int)n%10;
+if(rem%2==0){
+evencounter++;
+}
+else{
+oddcounter++;
+}
+n=n/10;
+}
+System.out.println("This Mobile Number "+arr[i]+" having "+ evencounter+" evennubers  ,"+oddcounter+" oddnumbers");
+}
+}
+}
+Output:
+This Mobile Number 8309454874 having 6 evennubers  ,4 oddnumbers
+This Mobile Number 6305836303 having 5 evennubers  ,5 oddnumbers
+This Mobile Number 8106064066 having 9 evennubers  ,1 oddnumbers
+This Mobile Number 8790974727 having 4 evennubers  ,6 oddnumbers
