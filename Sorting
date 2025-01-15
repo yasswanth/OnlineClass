@@ -1,0 +1,86 @@
+Sorting Techniques:
+1.Selection.
+          Selection sort is a process for sorting the numbers by comparing the first element to all elements present in the Array.
+Example progamm:
+ import java.util.*;
+public class Sorting{
+public static void SelectionSort(int[] arr){
+int temp;
+for(int i=0;i<arr.length;i++){
+for(int j=i+1;j<arr.length;j++){
+if(arr[i]>arr[j]){
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}}}}
+public static void main(String[] args){
+int [] arr={4,2,6,1,7};
+System.out.println("Before Sorting:"+Arrays.toString(arr));
+SelectionSort(arr);
+System.out.println("After Sorting:"+Arrays.toString(arr));
+}
+}
+Output:
+Before Sorting:[4, 2, 6, 1, 7]
+After Sorting:[1, 2, 4, 6, 7]
+2.Quick.
+3.Merge.
+4.Bubble.
+                    Example:
+                            import java.util.*;
+public class BubbleSort{
+public static void BubbleSorting(int [] arr){
+int temp;
+for(int i=1;i<arr.length;i++){
+for(int j=0;j<arr.length-i;j++){
+if( arr[j]>arr[j+1]){
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}
+}
+}
+}
+public static void main(String[] args){
+int [] arr={4,5,2,8,1,9};
+System.out.println("Before Soring:" +Arrays.toString(arr));
+BubbleSorting(arr);
+System.out.println("After Sorting:"+Arrays.toString(arr));
+}
+}      
+                       Output:
+                           Before Soring:[4, 5, 2, 8, 1, 9]
+After Sorting:[1, 2, 4, 5, 8, 9] 
+5.Counting.
+
+
+6.Inserstion Spot.
+   Example:
+                    import java.util.*;
+public class Insertion{
+public static void InsertionSort(int []arr){
+int temp;
+for(int i=1;i<arr.length;i++){
+temp=arr[i];
+int j=i-1;
+while(j>=0 && arr[j]>=temp){
+arr[j+1]=arr[j];
+j--;
+}
+arr[j+1]=temp;
+}
+}
+public static void main(String[] args){
+int arr[]={4,8,3,6,2};
+System.out.println("Before Sorting:"+Arrays.toString(arr));
+InsertionSort(arr);
+System.out.println("After Sorting:"+Arrays.toString(arr));
+}
+}
+Output:
+Before Sorting:[4, 8, 3, 6, 2]
+After Sorting:[2, 3, 4, 6, 8]
+7.Radix.
+Searching Techniques:
+1.Linear Search.
+2.Binary Search.
